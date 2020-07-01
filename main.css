@@ -1,0 +1,396 @@
+*{
+  padding:0;
+  margin:0;
+}
+html,body {
+  height:100%;
+}
+body{
+  background-color: #fafafa;
+  display: flex;
+  flex-flow: column;
+  font-family: Sans-Serif;
+  overflow: hidden;
+}
+a{text-decoration: none;}
+a, a:visited{color: #555;}
+a, a:active, a:focus {outline: none;}
+blockquote{
+  font-family: serif;
+  font-style: italic;
+  padding: .25rem .5rem;
+  width: 96%;
+  margin: 2rem 2%;
+}
+blockquote p{margin: .5rem auto;}
+code{
+  font-family: monospace;
+  font-size: .75rem;
+  overflow-x: auto;
+  white-space: no-wrap;
+}
+h1{font-size:28px}
+h2{font-size:24px}
+h3{font-size:20px}
+h4{font-size:18px}
+h5{font-size:16px}
+h6{font-size:14px}
+p {margin: 0 auto 1rem auto;}
+pre{
+  font-family: monospace;
+  font-size: .75rem;
+  margin: .25rem 0 1rem 0;
+  overflow-x: auto;
+  white-space: no-wrap;
+} 
+figure {
+  margin: 2rem auto;
+}
+figure *{
+  margin: 0 auto;
+}
+figure figcaption {
+  color: #555;
+  font-style: italic;
+  margin: .5rem auto;
+  text-align: center;
+}
+figure img {
+  background: #fff;
+  border: 1px #555 solid;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  max-width: 90%;
+}
+table{
+  border: thin #555 solid;
+  border-collapse: collapse;
+  color: #555;
+}
+tr:nth-child(odd) { background-color: #eee; }
+tr:nth-child(even) { background-color: #fff; }
+td,th{
+  border: thin #555 solid;
+  padding: .25rem .4rem;
+}
+th{
+  background-color: #485969;
+  color: white;
+  font-weight: 400;
+}
+
+/* the top header */
+header.main-header{
+  background-color: #485969;
+  display:flex;
+  flex-flow: row;
+  font-weight: 400;
+  font-family: Metropolis,"Avenir Next","Helvetica Neue",Arial,sans-serif;
+  letter-spacing: .01em;
+  color: #fafafa;
+  text-decoration: none;
+  height: 60px;
+  font-size: 1em;
+  line-height: 60px;
+  margin-bottom:.5rem;
+}
+header.main-header a {
+  color: #fff;
+}
+/* vmw logo */
+header.main-header div:first-child{
+  padding-top:12px;
+  padding-left: 1.5em;
+  padding-right: .75em;
+}
+/* github logo */
+header.main-header div:last-child{
+  margin-left: auto;
+}
+header.main-header div:last-child a{
+  display: flex;
+  align-items: center;
+  height: 16px;
+  margin: .5rem .75rem 0 0;
+  border: 1px solid #fafafa;
+  border-radius: .25em;
+  background-color: #fafafa;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px;
+}
+header.main-header div:last-child a *{
+  padding: 0 2px;
+}
+
+/* the page content including navs */
+article.main-article {
+  flex:1;
+  display:flex;
+  flex-flow: row;
+  overflow: hidden;
+}
+
+/* the main left-hand nav. the left nav is a ul which contains sub-menu ul. sub-menu text is wrapped in a span. */
+/* ul.top-level is the top-level ul */
+/* li.open is for open sub-menus */
+/* li.parent is a parent menu item of the current page */
+nav.left-nav {
+  background-color: #fafafa;
+  color: #555;
+  width:200px;
+  padding-left:.25rem;
+}
+nav.left-nav a{padding-right:.2rem;}
+nav.left-nav a:hover{color: #000;}
+nav.left-nav a.active{color: #e05244;}
+nav.left-nav span{
+  cursor: pointer;
+  display:block;
+  font-weight:600;
+  padding: .1rem .2rem .1rem 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+nav.left-nav span:hover{color: #1d428a;}
+nav.left-nav li {
+  display:block;
+  font-size: .75rem;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+nav.left-nav li ul { /* a sub-menu */
+  transition: opacity .5s ease-out;
+  opacity: 0; 
+  height: 0;
+  overflow: hidden;
+}
+nav.left-nav ul.top-level > li > span{background-color:#eee; font-size:.9rem; padding:.25rem 0;}
+nav.left-nav ul.top-level > li.open {border-bottom:3px solid #eee;}
+nav.left-nav ul.top-level > li.parent:not(.open) > span{color:#1d428a;}
+nav.left-nav ul:not(.top-level) > li > ul {padding-left:.2rem;}
+nav.left-nav li.parent > span{font-weight:600; color:#1d428a;} 
+nav.left-nav li.open > ul {height:auto; opacity:1;}
+
+
+
+/* the main content */
+main {
+  color: #555;
+  flex: 1;
+  font-size: .75em;
+  overflow-y: auto;
+  margin: 0 0 2rem 0;
+}
+main a, main a:visited{color: #0091da;}
+main a:hover{color: #e05244;}
+main h1, main h2, main h3, main h4, main h5{
+  font-weight: 500;
+  margin: .5rem 0;
+}
+main h1{font-size: 2.25rem;}
+main h2{font-size: 2rem;}
+main h3{font-size: 1.5rem;}
+main h4{font-size: 1.25rem;}
+main h5{font-size: 1rem;}
+main h6{font-size: .75rem;}
+
+
+/* the right-hand toc menu */
+div.TableOfContents{
+  border-bottom:3px solid #eee;
+  font-size: .7rem;
+  min-height: 100px;
+  width: 200px;
+  overflow-y: auto;
+  position: sticky;
+  float:right;
+  top:0;
+}
+div.TableOfContents li{
+  display: block;
+  padding-left: .25rem;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+div.TableOfContents li > ul{padding-left: .2rem;}
+div.TableOfContents li{padding-bottom: .1rem;}
+div.TableOfContents h1{
+  background-color: #eee;
+  padding: .1rem 0 .1rem .25rem;
+  font-size: .9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* the top-level article for home page */
+article.home{margin: 0 1rem;}
+article.home h1{font-size: 2rem;}
+article.home h2{font-size: 1.75rem;}
+
+/* the top-level article for single-page views */
+article.content{margin: 0 1rem;}
+article.content h2:not(:first-of-type){margin-top: 7rem;}
+article.content h2{text-decoration: underline;}
+article.content h3{margin-top: 2.5rem;}
+article.content h4, article.content h5, article.content h6{margin-top: 1.5rem;}
+article.content ol, article.content ul{margin: 0 0 1.75rem 1.5rem;}
+article.content li{
+  margin: .2rem 0;
+  padding-left: .25rem;
+}
+article.content.news h2:not(:first-of-type){margin-top: 2rem;}
+article.content.news h2{font-size: 1.75rem;}
+article.content.news h3{font-size: 1.5rem; margin-top: 1.5rem;}
+article.content.news h4, article.content h5, article.content h6{margin-top: 1rem;}
+article.content.with-toc{padding-right: 200px;} /* make room for toc if present */
+
+
+
+/* the top-level articles for list views */
+article.content-list{
+  margin: 0 1rem;
+  padding: 0 1rem;
+}
+
+/* article summaries for list views */
+article.summary{
+  background-color: #fff;
+  border: 1px solid #eee;
+  margin: .5rem 0;
+  padding: .5rem;
+}
+article.summary h1 a{color:#555}
+article.summary.news h1{font-size: 1.5rem;}
+article.summary.news h2{font-size: 1.25rem;}
+article.summary.news h3{font-size: 1rem;}
+
+
+/* guide articles within full-guide views */
+article.guide:not(:first-of-type){
+  padding-top: 7rem;
+}
+
+/* the main content header */
+header.content-header{
+  border-bottom: 2px solid #555;
+  margin-bottom: 3rem;
+  padding-bottom: .25rem;
+}
+header.content-header h1{font-size:2.5rem; font-style:italic; font-weight:600; text-decoration:none;}
+header.content-header h2{font-size:1.5rem; font-style:italic; font-weight:600; margin:0; text-decoration:none;}
+
+/* the article headers for full-guide views */
+header.guide-header{
+  background-color: #eee;
+  margin-bottom: 4rem;
+  padding: .25rem 0;
+}
+header.guide-header h1{font-size: 2.75rem;font-style: italic; font-weight:600; text-decoration:none;}
+header.guide-header h2{font-size: 2rem;font-style: italic; font-weight:600; margin:0; text-decoration:none;}
+
+/* main content footer */
+footer.content-footer{
+ border-top: 2px solid #eee;
+ font-style: italic;
+ margin-top: 5rem;
+ padding-top: 1rem;
+}
+footer.content-footer div{
+ margin: .5rem;
+}
+
+
+
+
+/* general header styling */
+header.bold{font-weight: 600;}
+header.medium{font-size: 1.25rem;}
+header.large{font-size: 1.5rem;}
+header.xlarge{font-size: 2rem;}
+
+/* figure styling */
+figure.no-center {
+  margin: 2rem 0; 
+  width: max-content;
+}
+figure.full-width > *{width: 100%;}
+
+/* used for export link inside fig shortcode */
+figure div.tab{
+  text-align: right;
+  width: auto;
+}
+figure div.tab a{padding: .1rem .25rem;}
+
+/* section styling */
+section{margin: 0 0 1rem 0;}
+
+section.bordered{
+  border: 1px solid #eee;
+  padding: 0.5rem 1rem;
+}
+section header{
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+section.checklist ol, section.checklist ul{list-style-type: "\2610";}
+section.callout{
+  background-color: #eee;
+  border-left: 3px solid #0091da;
+  font-style: italic;
+  padding: .25rem .5rem;
+  width: 96%;
+  margin: 2rem 0;
+}
+section.callout.red{border-left: 3px solid #e05244;}
+section.callout.green{border-left: 3px solid #6db33f;}
+section.callout header{font-size: 1rem;}
+section.callout ol, section.callout ul{margin: 0 0 .5rem 1.5rem;}
+
+/* span lists*/
+span.list{
+  display: inline;
+  margin:0;
+}
+span.list span:after {content: ", ";}
+span.list span:last-child:after {content: "";}
+
+/* pre styling */
+pre.bordered{
+  border: 1px solid #eee;
+  padding: 0.5rem 1rem;
+}
+pre.select-all{user-select: all;}
+
+
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+  article {
+    flex-direction: column;
+  }
+}
+
+@media print{
+  header.main-header,nav.left-nav,div.TableOfContents,footer.content-footer{display: none;}
+  body,article,main{
+    display: block !important; /* without this, only first page prints. !important overrides class settings. */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  article.guide:not(:first-of-type){page-break-before: always;}
+  article.content h2{margin-top:0 !important;}
+  article.content h2:not(:first-of-type){page-break-before: always;}
+  figure,table{page-break-inside: avoid;}
+}
+
+@page {
+  size: A4;
+}
