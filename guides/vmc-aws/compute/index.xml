@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compute on VMware Cloud Knowledge</title>
+    <link>https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/</link>
+    <description>Recent content in Compute on VMware Cloud Knowledge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vCenter Architecture</title>
+      <link>https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/vcenter-architecture/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/vcenter-architecture/</guid>
+      <description>The document discusses the general architecture of the vCenter deployment of an SDDC.</description>
+    </item>
+    
+    <item>
+      <title>Stretched Clusters</title>
+      <link>https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/stretched-cluster/</link>
+      <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/stretched-cluster/</guid>
+      <description>This document discusses the stretched cluster feature of an SDDC.</description>
+    </item>
+    
+    <item>
+      <title>EDRS</title>
+      <link>https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/edrs/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dspinhirne.github.io/vmcbook/guides/vmc-aws/compute/edrs/</guid>
+      <description>This document discusses the Elastic Distributed Resource Scheduler (EDRS) feature of an SDDC.</description>
+    </item>
+    
+  </channel>
+</rss>
