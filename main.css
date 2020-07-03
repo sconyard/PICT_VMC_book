@@ -391,7 +391,6 @@ pre.select-all{user-select: all;}
   figure,table{page-break-inside: avoid;}
 }
 .center {
-  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
