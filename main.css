@@ -390,6 +390,12 @@ pre.select-all{user-select: all;}
   article.content h2:not(:first-of-type){page-break-before: always;}
   figure,table{page-break-inside: avoid;}
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 @page {
   size: A4;
